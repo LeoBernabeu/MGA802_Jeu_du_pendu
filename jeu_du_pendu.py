@@ -69,6 +69,12 @@ def jeu_du_pendu(nom_fichier, nombre_chance=6):
     affichage = ['_' for _ in range(len(mot))]  # Liste représentant le mot avec les lettres trouvées par le joueur.
     liste_essais = []  # Liste pour garder en mémoire les lettres déjà testées.
 
+
+    # Explication rapide du jeu du pendu
+    print(f"Bienvenue dans le jeu du pendu. Vous devez donner des lettres pour réussir à retrouver un mot caché."
+          f"Pour cela, vous aurez {nombre_chance} chances.\n")
+    input("Appuyer sur une touche quand vous serez prêt à commencer.\n")
+
     # Boucle d'essais-erreurs jusqu'à trouver le mot où ne plus avoir de chance
     while nombre_chance != 0 and not is_win(affichage):
         lettre = input("Taper une lettre (en minuscule seulement et sans espace) : ")
